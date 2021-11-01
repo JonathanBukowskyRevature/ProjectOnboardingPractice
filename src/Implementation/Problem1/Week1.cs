@@ -54,5 +54,35 @@ namespace Implementation.Problem1
             }
             return sum;
         }
+
+
+        /// <summary>
+        /// Consider the following operation on an arbitrary positive integer:
+
+        /// - If n is even -> n / 2
+        /// - If n is odd -> n * 3 + 1
+
+        /// Create a function to repeatedly evaluate these operations, until reaching 1. Return the number of steps it took.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int Collatz(int n)
+        {
+            if (n < 1) throw new System.ArgumentException("Must be called with a positive integer");
+            int steps = 0;
+            while (n > 1)
+            {
+                steps++;
+                if (n % 2 == 0)
+                {
+                    n = n / 2;
+                }
+                else
+                {
+                    n = n * 3 + 1;
+                }
+            }
+            return steps;
+        }
     }
 }

@@ -12,9 +12,10 @@ namespace Implementation.Test
         [InlineData(new object[] { 3, 7, 1 })]
         [InlineData(new object[] { 3, 9, 3 })]
         [InlineData(new object[] { 18, 180, 18 })]
-        public void Test_GCD(int a, int b, int actual)
+        public void Test_GCD(int a, int b, int expected)
         {
-            Assert.Equal(Week1.GCD(a, b), actual);
+            int actual = Week1.GCD(a, b);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
@@ -23,6 +24,16 @@ namespace Implementation.Test
             double sum = Week1.UniqueFract();
 
             Assert.Equal(13.5, sum);
+        }
+
+        [Theory]
+        [InlineData(new object[] { 2, 1 })]
+        [InlineData(new object[] { 3, 7 })]
+        [InlineData(new object[] { 10, 6 })]
+        public void Test_Collatz(int input, int expected)
+        {
+            int actual = Week1.Collatz(input);
+            Assert.Equal(expected, actual);
         }
     }
 }
