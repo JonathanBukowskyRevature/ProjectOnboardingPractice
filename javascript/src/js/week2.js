@@ -6,6 +6,7 @@ Given the amount the robot has moved each time, you have to calculate the robot'
 */
 
 function trackRobot() {
+    throw new Error("test error");
     var curX = 0;
     var curY = 0;
     for (var i = 0; i < arguments.length; i++) {
@@ -70,8 +71,13 @@ var testProducts = [
 ]
 
 function main() {
-    var test1 = trackRobot(20, 30, 10, 40);
-    console.log(test1, test1[0] == -10 && test1[1] == 10 ? 'Correct' : 'Incorrect');
+    try {
+        var test1 = trackRobot(20, 30, 10, 40);
+        console.log(test1, test1[0] == -10 && test1[1] == 10 ? 'Correct' : 'Incorrect');
+    }
+    catch (error) {
+        console.log(error);
+    }
 
     var test2 = trackRobot();
     console.log(test2, test2[0] == 0 && test2[1] == 0 ? 'Correct' : 'Incorrect');
