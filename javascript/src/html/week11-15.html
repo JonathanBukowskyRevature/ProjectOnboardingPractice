@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11-15 problems</title>
+</head>
+
+<body>
+    <h1>Problem 1</h1>
+    <p>Write two functions:</p>
+    <ul>
+        <li>One to retrieve all unique substrings that start and end with a vowel.</li>
+        <li>One to retrieve all unique substrings that start and end with a consonant.</li>
+    </ul>
+    <p>The resulting array should be sorted in lexicographic ascending order (same order as a dictionary).</p>
+    <h3>Examples:</h3>
+
+    <p>getVowelSubstrings("apple") -> ["a", "apple", "e"]</p>
+    <p>actual: <span id="getVowelSubstrings1"></span></p>
+    <p>getVowelSubstrings("hmm") -> []</p>
+    <p>actual: <span id="getVowelSubstrings2"></span></p>
+
+    <p>getConsonantSubstrings("aviation") -> ["n", "t", "tion", "v", "viat", "viation"]</p>
+    <p>actual: <span id="getConsonantSubstrings1"></span></p>
+    <p>getConsonantSubstrings("motor") -> ["m", "mot", "motor", "r", "t", "tor"]</p>
+    <p>actual: <span id="getConsonantSubstrings2"></span></p>
+
+    <h1>Problem 2</h1>
+    <p>Write a function redundant that takes in a string 'str' and returns a function that returns 'str'.</p>
+    <h3>Examples:</h3>
+    <p>const f1 = redundant("apple")</p>
+    <p>f1() &dash;&dash;&gt; "apple"</p>
+    <p>actual: <span id="redundant1"></span></p>
+
+    <p>const f2 = redundant("pear")</p>
+    <p>f2() &dash;&dash;&gt; "pear"</p>
+    <p>actual: <span id="redundant2"></span></p>
+
+    <p>const f3 = redundant("")</p>
+    <p>f3() &dash;&dash;&gt; ""</p>
+    <p>actual: <span id="redundant3"></span></p>
+
+    <script src="../js/week11-15-p1.js"></script>
+    <script src="../js/week11-15-p2.js"></script>
+</body>
+
+</html>
