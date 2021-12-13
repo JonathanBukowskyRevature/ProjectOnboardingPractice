@@ -17,7 +17,8 @@ namespace Implementation.Dec13
                     }
                 }
             }
-            return (wrongCount <= 1);
+            // if s is odd-length, then we can change the middle char if wrongCount == 0
+            return ((s.Length % 2 != 0 && wrongCount <= 1) || wrongCount == 1);
         }
     }
 }
